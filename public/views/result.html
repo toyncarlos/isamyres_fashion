@@ -1,0 +1,16 @@
+<div class="jumbotron text-center" ng-controller="FeedController">
+    <div ng-repeat="item in items" class="container">
+      <hr>
+      <li>
+        {{item.description}}
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="glyphicon glyphicon-menu-down"></span>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" ng-repeat="option in item.options">
+            <a class="dropdown-item" href="(option.action)">option.name</a>
+          </div>
+        </div>
+      </li>
+    </div>
+</div>
